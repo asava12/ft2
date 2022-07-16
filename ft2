@@ -1,0 +1,81 @@
+// ==UserScript==
+// @name         New Userscript
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://faptitans.com/
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=faptitans.com
+// @grant        none
+// ==/UserScript==
+
+function sleep(ms) {
+ return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function fas(){
+	var btn = document.createElement("button");
+	btn.innerHTML = "1";
+	btn.id = "btn";
+	btn.style = "text-align: center;color: green;height: 30px;";
+	btn.onclick = function()
+    {
+      if (btn.innerHTML == "1") {
+        btn.innerHTML = "0"   ;
+      } else {
+        btn.innerHTML = "1";
+      };sas();
+    };
+	document.body.insertBefore(btn, document.body.firstChild);
+}
+fas();
+
+
+
+
+async  function sas(){
+var items = document.querySelector('button#btn');
+	for(var es = 1; items.textContent < es;){
+		ara();
+ 		await sleep(1000)
+ 	}
+}
+sas();
+
+
+//////////////////
+async  function zaz(){
+  dikc = document.querySelector('div[class="quest-box"]').querySelectorAll('li[class="quest open"]')[1];
+  await sleep(1000);
+  dikc.click();
+  await sleep(1000);
+  document.querySelector('div[class="btn-simple-gold btn-ok-free"]').click()
+	await sleep(1000);
+  document.querySelector('div[class="btn-simple-green btn-ok"]').click()
+	await sleep(1000);
+	itemq = document.querySelector('button#btn');
+	items = document.querySelector('div[class="quest-box"]').querySelectorAll('li[class="quest open"]');
+}
+//////////////////
+async  function zax(){
+  var ea = 1;
+  var es = 2;
+	var itemq = document.querySelector('button#btn');
+  var items = document.querySelector('div[class="quest-box"]').querySelectorAll('li[class="quest open"]');
+	for(es = 2,ea = 1; items.length < es && itemq.textContent < ea ;){
+		console.log(4);
+		mela = document.querySelector('div#root').querySelector('.container.undefined').querySelector('.all-heroes-box').querySelector('.hero-card-box-all').querySelectorAll('.hero-card div[class="color-btn green "]');
+		alem = mela.length;
+		ele = alem < 1 ? "" : mela[alem-1];
+		ele.click();
+  	itemq = document.querySelector('button#btn');
+		items = document.querySelector('div[class="quest-box"]').querySelectorAll('li[class="quest open"]');
+ 		await sleep(1000)
+ 		}
+}
+//////////////////
+async function ara(){
+  console.log(1)
+zax();
+  zaz();
+}
